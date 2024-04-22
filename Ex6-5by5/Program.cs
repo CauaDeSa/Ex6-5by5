@@ -18,8 +18,11 @@ do
         height = float.Parse(Console.ReadLine());
     } while (height <= 0);
 
-    Console.Write("Sex (m/f): ");
-    sex = Console.ReadLine();
+    do
+    {
+        Console.Write("Sex (m/f): ");
+        sex = Console.ReadLine();
+    } while (sex != "m" && sex != "f");
 
     bmi = weight / (Math.Pow(height, 2));
 
