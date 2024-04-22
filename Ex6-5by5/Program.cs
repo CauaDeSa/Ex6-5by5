@@ -18,23 +18,21 @@ do
         height = float.Parse(Console.ReadLine());
     } while (height <= 0);
 
-    Console.Write("Sex: ");
+    Console.Write("Sex (m/f): ");
     sex = Console.ReadLine();
 
     bmi = weight / (Math.Pow(height, 2));
 
-    if (bmi < 18.49)
+    if ((bmi < 20.7 && sex == "m") || (bmi < 19.1 && sex == "f"))
         Console.WriteLine("Below normal!");
-    else if (bmi < 24.99)
+    else if ((bmi < 26.4 && sex == "m") || (bmi < 25.8 && sex == "f"))
             Console.WriteLine("Healthy range!");
-        else if (bmi < 29.99)
-                Console.WriteLine("Overweight!");
-            else if (bmi < 34.99)
-                    Console.WriteLine("Grade I obesity range");
-                else if (bmi < 39.99)
-                        Console.WriteLine("Grade II obesity range");
-                     else
-                        Console.WriteLine("Grade III obesity range");
+        else if ((bmi < 27.8 && sex == "m") || (bmi < 27.3 && sex == "f"))
+                Console.WriteLine("A little overweight!");
+            else if ((bmi < 32.3 && sex == "m") || (bmi < 31.1 && sex == "f"))
+                    Console.WriteLine("Overweight!");
+                else
+                    Console.WriteLine("Obesity range!");
 
     Console.WriteLine($"Your BMI: {bmi}");
 
