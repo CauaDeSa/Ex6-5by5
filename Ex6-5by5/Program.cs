@@ -37,7 +37,7 @@ do
                 else
                     Console.WriteLine("Obesity range!");
 
-    Console.WriteLine($"Your BMI: {bmi}");
+    Console.WriteLine($"Your BMI: {bmi:0.00}");
 
     Console.Write("\nDo you wanna test again? (y/n) : ");
 } while (Console.ReadLine() == "y");
