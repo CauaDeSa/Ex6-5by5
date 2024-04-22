@@ -26,7 +26,7 @@ do
 
     bmi = weight / (Math.Pow(height, 2));
 
-    switch (bmi)
+    switch (bmi) {
         case (bmi < 20.7 && sex == "m") || (bmi < 19.1 && sex == "f"):
         Console.WriteLine("Below normal!");
         break;
@@ -46,7 +46,7 @@ do
     default:
         Console.WriteLine("Obesity range!");
         break;
-
+    }
         Console.WriteLine($"Your BMI: {bmi:0.00}");
 
         Console.Write("\nDo you wanna test again? (y/n) : ");
