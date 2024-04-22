@@ -8,13 +8,13 @@ do
 
     do
     {
-        Console.Write("Weight: ");
+        Console.Write("Weight (kilograms): ");
         weight = float.Parse(Console.ReadLine());
     } while (weight <= 0);
 
     do
     {
-        Console.Write("Height: ");
+        Console.Write("Height (meters): ");
         height = float.Parse(Console.ReadLine());
     } while (height <= 0);
 
@@ -26,8 +26,7 @@ do
 
     bmi = weight / (Math.Pow(height, 2));
 
-    switch (bmi) {
-        case (bmi < 20.7 && sex == "m") || (bmi < 19.1 && sex == "f"):
+    if ((bmi < 20.7 && sex == "m") || (bmi < 19.1 && sex == "f"))
         Console.WriteLine("Below normal!");
     else if ((bmi < 26.4 && sex == "m") || (bmi < 25.8 && sex == "f"))
             Console.WriteLine("Healthy range!");
