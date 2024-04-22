@@ -1,6 +1,6 @@
 ﻿float height, weight;
 double bmi;
-string sex;
+char sex;
 
 do
 {
